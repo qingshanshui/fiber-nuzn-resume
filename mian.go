@@ -1,8 +1,6 @@
 package main
 
 import (
-	"log"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html"
 )
@@ -18,5 +16,5 @@ func main() {
 		return c.Render("index", nil)
 	})
 
-	log.Fatal(app.Listen(":8004"))
+	app.Listen(":8004")
 }
