@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>在线简历</title>
 
 
     <link rel="stylesheet" type="text/css" href="fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="examples.css" />
     <link rel="stylesheet" href="animate.min.css" />
     <!-- ZUI 标准版压缩后的 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/zui/1.10.0/css/zui.min.css">
+    <link rel="stylesheet" href="zui.min.css">
 
     <!--[if IE]>
 		<script type="text/javascript">
@@ -20,6 +20,11 @@
 		</script>
 	<![endif]-->
     <style>
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
         * {
             font-family: 'youyuan';
         }
@@ -82,16 +87,6 @@
             padding: 20px 0;
         }
 
-        @media (max-width: 768px) {
-            .skill-content-item-circle{
-                width: 20px !important;
-                height: 20px !important;
-            }
-            .skill-content-item-title{
-                font-size: 16px !important;
-            }
-        }
-
         .skill-content-item {
             flex-wrap: wrap;
         }
@@ -121,6 +116,29 @@
             background-color: aliceblue !important;
             border: 2px solid #7c7c7c;
         }
+
+        .fp-overflow {
+            overflow-y: unset !important;
+        }
+
+        .project-content img {
+            height: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .skill-content-item-circle {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            .skill-content-item-title {
+                font-size: 16px !important;
+            }
+
+            .project-content img {
+                height: 150px;
+            }
+        }
     </style>
 </head>
 
@@ -135,24 +153,24 @@
     <div id="fullpage">
         <div class="section " id="section0">
             <div class="info-content fcc">
-                <div class="info-content-portrait animate__animated animate__bounce">
-                    <img src="http://xiaotan-kbs.gitee.io/web-resume/image/4.png" alt="">
+                <div class="info-content-portrait">
+                    <img src="images/info.png" alt="">
                 </div>
-                <div class="info-content-title animate__animated animate__wobble">
+                <div class="info-content-title">
                     人生如同一面镜子，假如你对它微笑，它也回报你微笑。
                 </div>
                 <div class="info-content-hr">
                 </div>
-                <div class="info-content-item animate__animated animate__backInLeft">
+                <div class="info-content-item usernmaeLeft">
                     刘洋
                 </div>
-                <div class="info-content-item animate__animated animate__backInRight">
+                <div class="info-content-item webRight">
                     web前端工程师
                 </div>
-                <div class="info-content-item animate__animated animate__backInLeft">
+                <div class="info-content-item positionLeft">
                     求职:武汉
                 </div>
-                <div class="info-content-item animate__animated animate__backInRight">
+                <div class="info-content-item wxRight">
                     微信:lookdbsgw
                 </div>
             </div>
@@ -269,30 +287,29 @@
             </div>
         </div>
         <div class="section" id="section2">
-
             <div class="project-content container">
                 <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
                     <a href="https://resume.nuzn.cn/" target="_blank">
                         <p>个人在线简历</p>
-                        <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
+                        <img src="images/1.png" alt="">
                     </a>
                 </div>
                 <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
                     <a href="https://blog.nuzn.cn" target="_blank">
                         <p>博客</p>
-                        <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
+                        <img src="images/2.png" alt="">
                     </a>
                 </div>
                 <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
                     <a href="https://gitee.com/qingshanshui/fiber-layout" target="_blank">
                         <p>go-fiber</p>
-                        <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
+                        <img src="images/3.png" alt="">
                     </a>
                 </div>
                 <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
                     <a href="https://gitee.com/qingshanshui/fiber-layout-mvc" target="_blank">
                         <p>go-fiber-mvc</p>
-                        <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
+                        <img src="images/4.png" alt="">
                     </a>
                 </div>
             </div>
@@ -300,20 +317,67 @@
     </div>
 
     <!-- ZUI Javascript 依赖 jQuery -->
-    <script src="//cdn.bootcdn.net/ajax/libs/zui/1.10.0/lib/jquery/jquery.js"></script>
+    <script src="jquery.js"></script>
     <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
-    <script src="//cdn.bootcdn.net/ajax/libs/zui/1.10.0/js/zui.min.js"></script>
+    <script src="zui.min.js"></script>
     <script type="text/javascript" src="fullpage.js"></script>
+    <script type="text/javascript">
+        const animateCSS = (element, animation, prefix = 'animate__') =>
+            // We create a Promise and return it
+            new Promise((resolve, reject) => {
+                const animationName = `${prefix}${animation}`;
+                const node = document.querySelectorAll(element);
+
+                node.forEach(item => {
+                    item.classList.add(`${prefix}animated`, animationName);
+
+                    // When the animation ends, we clean the classes and resolve the Promise
+                    function handleAnimationEnd(event) {
+                        event.stopPropagation();
+                        item.classList.remove(`${prefix}animated`, animationName);
+                        resolve('Animation ended');
+                    }
+
+                    item.addEventListener('animationend', handleAnimationEnd, { once: true });
+                })
+
+            });
+
+    </script>
+
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
             navigation: true,// 开启右侧 小圆点
+            loopHorizontal: false,
             // licenseKey: 'YOUR_KEY_HERE', // 商业产品密钥
             // anchors: ['info', 'skill', 'project'], // 菜单对应的锚链接
             // menu: '#menu', // 开启菜单
+            afterLoad: function (anchorLink, index) {
+                console.log(111, index.index);
+                switch (index.index) {
+                    case 0:
+                        animateCSS('.info-content-portrait', 'bounce');
+                        animateCSS('.info-content-title', 'wobble');
+                        animateCSS('.usernmaeLeft', 'backInLeft');
+                        animateCSS('.positionLeft', 'backInLeft');
+                        animateCSS('.webRight', 'backInRight');
+                        animateCSS('.wxRight', 'backInRight');
+                        break;
+                    case 1:
+                        animateCSS('.skill-content-item', 'heartBeat');
+                        break;
+                    case 2:
+                        animateCSS('.project-content-item', 'bounce');
+                        break;
+                    default:
+                        break;
+                }
+            },
         });
 
     </script>
+
 
 </body>
 
