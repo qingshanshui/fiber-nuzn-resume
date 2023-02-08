@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="examples.css" />
     <link rel="stylesheet" href="animate.min.css" />
+    <!-- ZUI 标准版压缩后的 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/zui/1.10.0/css/zui.min.css">
 
     <!--[if IE]>
 		<script type="text/javascript">
@@ -38,6 +40,7 @@
         }
 
         .info-content {
+            max-width: 600px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -79,10 +82,21 @@
             padding: 20px 0;
         }
 
-        .skill-content-item{
+        @media (max-width: 768px) {
+            .skill-content-item-circle{
+                width: 20px !important;
+                height: 20px !important;
+            }
+            .skill-content-item-title{
+                font-size: 16px !important;
+            }
+        }
+
+        .skill-content-item {
             flex-wrap: wrap;
         }
-        .skill-content-item-circles{
+
+        .skill-content-item-circles {
             flex-wrap: wrap;
         }
 
@@ -107,33 +121,16 @@
             background-color: aliceblue !important;
             border: 2px solid #7c7c7c;
         }
-
-        .project-content {
-            flex-wrap: wrap;
-            width: 1100px;
-            margin: 0 auto;
-        }
-
-        .project-content-item img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .project-content-item {
-            width: 25%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 
 <body>
 
-    <ul id="menu">
+    <!-- <ul id="menu">
         <li data-menuanchor="info" class="active"><a href="#info">基本信息</a></li>
         <li data-menuanchor="skill"><a href="#skill">职业技能</a></li>
         <li data-menuanchor="project"><a href="#project">开源项目</a></li>
-    </ul>
+    </ul> -->
 
     <div id="fullpage">
         <div class="section " id="section0">
@@ -162,14 +159,14 @@
 
         </div>
         <div class="section" id="section1">
-            <div class="skill-content">
-             
+            <div class="skill-content container">
+
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">HTML</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
@@ -182,9 +179,9 @@
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">CSS</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
@@ -197,9 +194,9 @@
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">JS</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
@@ -212,9 +209,9 @@
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">VUE</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
@@ -227,9 +224,9 @@
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">Golang</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle"></div>
@@ -242,9 +239,9 @@
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">rust</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle"></div>
                         <div class="skill-content-item-circle full"></div>
                         <div class="skill-content-item-circle full"></div>
@@ -257,9 +254,9 @@
                 <div class="skill-content-item fcc">
                     <div class="skill-content-item-title">node</div>
                     <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
+                        <div class="skill-content-item-circle visible-lg"></div>
                         <div class="skill-content-item-circle full"></div>
                         <div class="skill-content-item-circle full"></div>
                         <div class="skill-content-item-circle full"></div>
@@ -273,27 +270,27 @@
         </div>
         <div class="section" id="section2">
 
-            <div class="project-content fcc">
-                <div class="project-content-item">
-                    <a href="https://resume.nuzn.cn/"  target="_blank">
+            <div class="project-content container">
+                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                    <a href="https://resume.nuzn.cn/" target="_blank">
                         <p>个人在线简历</p>
                         <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
                     </a>
                 </div>
-                <div class="project-content-item">
+                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
                     <a href="https://blog.nuzn.cn" target="_blank">
                         <p>博客</p>
                         <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
                     </a>
                 </div>
-                <div class="project-content-item">
-                    <a href="https://gitee.com/qingshanshui/fiber-layout"  target="_blank">
+                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                    <a href="https://gitee.com/qingshanshui/fiber-layout" target="_blank">
                         <p>go-fiber</p>
                         <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
                     </a>
                 </div>
-                <div class="project-content-item">
-                    <a href="https://gitee.com/qingshanshui/fiber-layout-mvc"  target="_blank">
+                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                    <a href="https://gitee.com/qingshanshui/fiber-layout-mvc" target="_blank">
                         <p>go-fiber-mvc</p>
                         <img src="https://xiaodan_yu.gitee.io/resume.io/styles/img/portfolio/prj-02.jpg" alt="">
                     </a>
@@ -302,15 +299,18 @@
         </div>
     </div>
 
-
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script src="//cdn.bootcdn.net/ajax/libs/zui/1.10.0/lib/jquery/jquery.js"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script src="//cdn.bootcdn.net/ajax/libs/zui/1.10.0/js/zui.min.js"></script>
     <script type="text/javascript" src="fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
             navigation: true,// 开启右侧 小圆点
             // licenseKey: 'YOUR_KEY_HERE', // 商业产品密钥
-            anchors: ['info', 'skill', 'project'], // 菜单对应的锚链接
-            menu: '#menu', // 开启菜单
+            // anchors: ['info', 'skill', 'project'], // 菜单对应的锚链接
+            // menu: '#menu', // 开启菜单
         });
 
     </script>
