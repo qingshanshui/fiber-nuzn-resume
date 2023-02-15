@@ -1,390 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>在线简历</title>
-
-
-    <link rel="stylesheet" type="text/css" href="fullpage.min.css" />
-    <link rel="stylesheet" type="text/css" href="examples.css" />
-    <link rel="stylesheet" href="animate.min.css" />
+    <link rel="stylesheet" type="text/css"
+          href="https://pan.nuzn.cn/v1/download?path=/fullpage/4.0.16/fullpage.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://pan.nuzn.cn/v1/download?path=/animate/4.1.1/animate.min.css"/>
     <!-- ZUI 标准版压缩后的 CSS 文件 -->
-    <link rel="stylesheet" href="zui.min.css">
-
-    <!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-    <style>
-        a,
-        a:hover {
-            text-decoration: none;
-        }
-
-        * {
-            font-family: 'youyuan';
-        }
-
-        .section {
-            height: 100%;
-            width: 100%;
-        }
-
-        .fcc {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #menu {
-            text-align: center;
-        }
-
-        .info-content {
-            max-width: 600px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%;
-            flex-wrap: wrap;
-            color: #fff;
-        }
-
-        .info-content div {
-            width: 100%;
-        }
-
-        .info-content-portrait {
-            width: 200px !important;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .info-content-portrait img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .info-content-title {
-            font-size: 21px;
-            margin: 20px 5px;
-        }
-
-        .info-content-hr {
-            width: 100%;
-            height: 2px;
-            background-color: antiquewhite;
-        }
-
-        .info-content-item {
-            font-size: 16px;
-            padding: 20px 0;
-        }
-
-        .skill-content-item {
-            flex-wrap: wrap;
-        }
-
-        .skill-content-item-circles {
-            flex-wrap: wrap;
-        }
-
-        .skill-content-item-title {
-            font-size: 31px;
-            color: #fff;
-            font-weight: 700;
-            width: 100px;
-        }
-
-        .skill-content-item-circle {
-            width: 30px;
-            height: 30px;
-            margin: 10px;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: aquamarine;
-            box-sizing: border-box;
-        }
-
-        .full {
-            background-color: aliceblue !important;
-            border: 2px solid #7c7c7c;
-        }
-
-        .fp-overflow {
-            overflow-y: unset !important;
-        }
-
-        .project-content img {
-            height: 200px;
-        }
-
-        @media (max-width: 768px) {
-            .skill-content-item-circle {
-                width: 20px !important;
-                height: 20px !important;
-            }
-
-            .skill-content-item-title {
-                font-size: 16px !important;
-            }
-
-            .project-content img {
-                height: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://pan.nuzn.cn/v1/download?path=/zui/1.10.0/css/zui.min.css">
+    <link rel="stylesheet" type="text/css" href="examples.css"/>
+    <link rel="stylesheet" type="text/css" href="nuzn.css"/>
 </head>
-
 <body>
 
-    <!-- <ul id="menu">
-        <li data-menuanchor="info" class="active"><a href="#info">基本信息</a></li>
-        <li data-menuanchor="skill"><a href="#skill">职业技能</a></li>
-        <li data-menuanchor="project"><a href="#project">开源项目</a></li>
-    </ul> -->
+<!-- <ul id="menu">
+    <li data-menuanchor="info" class="active"><a href="#info">基本信息</a></li>
+    <li data-menuanchor="skill"><a href="#skill">职业技能</a></li>
+    <li data-menuanchor="project"><a href="#project">开源项目</a></li>
+</ul> -->
 
-    <div id="fullpage">
-        <div class="section " id="section0">
-            <div class="info-content fcc">
-                <div class="info-content-portrait">
-                    <img src="images/info.png" alt="">
-                </div>
-                <div class="info-content-title">
-                    人生如同一面镜子，假如你对它微笑，它也回报你微笑。
-                </div>
-                <div class="info-content-hr">
-                </div>
-                <div class="info-content-item usernmaeLeft">
-                    刘洋
-                </div>
-                <div class="info-content-item webRight">
-                    web前端工程师
-                </div>
-                <div class="info-content-item positionLeft">
-                    求职:武汉
-                </div>
-                <div class="info-content-item wxRight">
-                    微信:lookdbsgw
-                </div>
+<div id="fullpage">
+    <div class="section " id="section0">
+        <div class="info-content fcc">
+            <div class="info-content-portrait">
+                <img src="images/info.png" alt="">
             </div>
-
-        </div>
-        <div class="section" id="section1">
-            <div class="skill-content container">
-
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">HTML</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle full"></div>
-                    </div>
-                </div>
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">CSS</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                    </div>
-                </div>
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">JS</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                    </div>
-                </div>
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">VUE</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                    </div>
-                </div>
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">Golang</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                    </div>
-                </div>
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">rust</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                    </div>
-                </div>
-                <div class="skill-content-item fcc">
-                    <div class="skill-content-item-title">node</div>
-                    <div class="skill-content-item-circles fcc">
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle visible-lg"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                        <div class="skill-content-item-circle full"></div>
-                    </div>
-                </div>
+            <div class="info-content-title">
+                人生如同一面镜子，假如你对它微笑，它也回报你微笑。
+            </div>
+            <div class="info-content-hr">
+            </div>
+            <div class="info-content-item usernmaeLeft">
+                刘洋
+            </div>
+            <div class="info-content-item webRight">
+                web前端工程师
+            </div>
+            <div class="info-content-item positionLeft">
+                求职:武汉
+            </div>
+            <div class="info-content-item wxRight">
+                微信:lookdbsgw
             </div>
         </div>
-        <div class="section" id="section2">
-            <div class="project-content container">
-                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
-                    <a href="https://resume.nuzn.cn/" target="_blank">
-                        <p>个人在线简历</p>
-                        <img src="images/1.png" alt="">
-                    </a>
+    </div>
+    <div class="section" id="section1">
+        <div class="skill-content container">
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">HTML</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle full"></div>
                 </div>
-                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
-                    <a href="https://blog.nuzn.cn" target="_blank">
-                        <p>博客</p>
-                        <img src="images/2.png" alt="">
-                    </a>
+            </div>
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">CSS</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
                 </div>
-                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
-                    <a href="https://gitee.com/qingshanshui/fiber-layout" target="_blank">
-                        <p>go-fiber</p>
-                        <img src="images/3.png" alt="">
-                    </a>
+            </div>
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">JS</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
                 </div>
-                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
-                    <a href="https://gitee.com/qingshanshui/fiber-layout-mvc" target="_blank">
-                        <p>go-fiber-mvc</p>
-                        <img src="images/4.png" alt="">
-                    </a>
+            </div>
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">VUE</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
                 </div>
-                <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
-                    <a href="https://admin.nuzn.cn" target="_blank">
-                        <p>后台管理系统</p>
-                        <img src="images/5.png" alt="">
-                    </a>
+            </div>
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">Golang</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                </div>
+            </div>
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">rust</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                </div>
+            </div>
+            <div class="skill-content-item fcc">
+                <div class="skill-content-item-title">node</div>
+                <div class="skill-content-item-circles fcc">
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle visible-lg"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
+                    <div class="skill-content-item-circle full"></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- ZUI Javascript 依赖 jQuery -->
-    <script src="jquery.js"></script>
-    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
-    <script src="zui.min.js"></script>
-    <script type="text/javascript" src="fullpage.js"></script>
-    <script type="text/javascript">
-        const animateCSS = (element, animation, prefix = 'animate__') =>
-            // We create a Promise and return it
-            new Promise((resolve, reject) => {
-                const animationName = `${prefix}${animation}`;
-                const node = document.querySelectorAll(element);
-
-                node.forEach(item => {
-                    item.classList.add(`${prefix}animated`, animationName);
-
-                    // When the animation ends, we clean the classes and resolve the Promise
-                    function handleAnimationEnd(event) {
-                        event.stopPropagation();
-                        item.classList.remove(`${prefix}animated`, animationName);
-                        resolve('Animation ended');
-                    }
-
-                    item.addEventListener('animationend', handleAnimationEnd, { once: true });
-                })
-
-            });
-
-    </script>
-
-    <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage', {
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-            navigation: true,// 开启右侧 小圆点
-            loopHorizontal: false,
-            // licenseKey: 'YOUR_KEY_HERE', // 商业产品密钥
-            // anchors: ['info', 'skill', 'project'], // 菜单对应的锚链接
-            // menu: '#menu', // 开启菜单
-            afterLoad: function (anchorLink, index) {
-                console.log(111, index.index);
-                switch (index.index) {
-                    case 0:
-                        animateCSS('.info-content-portrait', 'bounce');
-                        animateCSS('.info-content-title', 'wobble');
-                        animateCSS('.usernmaeLeft', 'backInLeft');
-                        animateCSS('.positionLeft', 'backInLeft');
-                        animateCSS('.webRight', 'backInRight');
-                        animateCSS('.wxRight', 'backInRight');
-                        break;
-                    case 1:
-                        animateCSS('.skill-content-item', 'heartBeat');
-                        break;
-                    case 2:
-                        animateCSS('.project-content-item', 'bounce');
-                        break;
-                    default:
-                        break;
-                }
-            },
-        });
-
-    </script>
-
-
+    <div class="section" id="section2">
+        <div class="project-content container">
+            <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                <a href="https://resume.nuzn.cn/" target="_blank">
+                    <p>个人在线简历</p>
+                    <img src="images/1.png" alt="">
+                </a>
+            </div>
+            <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                <a href="https://blog.nuzn.cn" target="_blank">
+                    <p>博客</p>
+                    <img src="images/2.png" alt="">
+                </a>
+            </div>
+            <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                <a href="https://gitee.com/qingshanshui/fiber-layout" target="_blank">
+                    <p>go-fiber</p>
+                    <img src="images/3.png" alt="">
+                </a>
+            </div>
+            <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                <a href="https://gitee.com/qingshanshui/fiber-layout-mvc" target="_blank">
+                    <p>go-fiber-mvc</p>
+                    <img src="images/4.png" alt="">
+                </a>
+            </div>
+            <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                <a href="https://admin.nuzn.cn" target="_blank">
+                    <p>后台管理系统</p>
+                    <img src="images/5.png" alt="">
+                </a>
+            </div>
+            <div class="project-content-item col-xs-6 col-sm-4 col-lg-3">
+                <a href="https://pan.nuzn.cn" target="_blank">
+                    <p>云盘</p>
+                    <img src="images/6.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ZUI Javascript 依赖 jQuery -->
+<script src="https://pan.nuzn.cn/v1/download?path=/jquery/3.63/jquery-3.6.3.min.js"></script>
+<!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+<script src="https://pan.nuzn.cn/v1/download?path=/zui/1.10.0/js/zui.min.js"></script>
+<script type="text/javascript" src="https://pan.nuzn.cn/v1/download?path=/fullpage/4.0.16/fullpage.min.js"></script>
+<script src="nuzn.js"></script>
 </body>
-
 </html>
