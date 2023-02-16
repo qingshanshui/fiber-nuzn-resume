@@ -15,6 +15,5 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.Render("index", nil)
 	})
-
 	app.Listen(":8004")
 }
