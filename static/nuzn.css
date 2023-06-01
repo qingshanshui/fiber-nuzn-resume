@@ -103,6 +103,14 @@ a:hover {
     height: 200px;
 }
 
+.project-content p {
+    /*//超出一行省略号*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
 @media (max-width: 768px) {
     .skill-content-item-circle {
         width: 20px !important;

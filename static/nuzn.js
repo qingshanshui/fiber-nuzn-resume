@@ -27,7 +27,6 @@ let myFullpage = new fullpage('#fullpage', {
     // anchors: ['info', 'skill', 'project'], // 菜单对应的锚链接
     // menu: '#menu', // 开启菜单
     afterLoad: function (anchorLink, index) {
-        console.log(111, index.index);
         switch (index.index) {
             case 0:
                 animateCSS('.info-content-portrait', 'bounce');
